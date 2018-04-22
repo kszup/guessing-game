@@ -4,16 +4,19 @@
 
 
 echo "Hello! Guess how many files are in this directory. No peaking!"
+echo -n "Guess: "
 read guess
-echo $guess
-number_of_files=$(ls | wc -w) # ls -a | wc -w
-echo $number_of_files
+#echo $guess
 
-while [[ $count -gt 0 ]]
+number_of_files=$(ls | wc -w) # ls -a | wc -w
+#echo $number_of_files
+
+while [[ $guess -ne $number_of_files ]]
 do
-  echo "count is equal to $count"
-  let count=$count-1
+  echo "The guess of $guess was INCORRECT! Try again."
+  echo -n "Guess how many files are in this directory: "
+  read guess
 done
 
-
+echo -e "\nThe guess of $guess was CORRECT! Bye."
 
