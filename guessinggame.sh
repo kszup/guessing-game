@@ -32,5 +32,5 @@ do
   read guess
 done
 
-echo -e "\nThe guess of $guess was CORRECT! Bye."
+echo -e "\nCongratulations! The guess of $guess is CORRECT! Bye."
 
