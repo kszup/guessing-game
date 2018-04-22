@@ -6,10 +6,10 @@ function lowhigh {
   # Function takes two arguments: guess and number of files
   if [[ $1 -lt $2 ]]
   then
-    echo "The guess is too low! Try again."
+    echo "The guess is too LOW! Try again."
   elif [[ $1 -gt $2 ]]
   then
-    echo "The guess is too high! Try again."
+    echo "The guess is too HIGH! Try again."
   else
     echo "Error"
   fi
@@ -22,7 +22,7 @@ read guess
 #echo $guess
 
 number_of_files=$(ls | wc -w) # ls -a | wc -w
-echo $number_of_files # For testing
+#echo $number_of_files # For testing
 
 while [[ $guess -ne $number_of_files ]]
 do
